@@ -1,0 +1,28 @@
+.contextMenu{
+    background-color: #2e2e2e;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.contextMenu > li {
+    list-style-type: none;
+    text-align: center;
+    border-bottom: gray 1px solid;
+}
+
+.contextMenu > li:last-child{
+    border: none
+}
+
+.contextMenu > li > p{
+    margin: 5px 25px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.contextMenu > li > p:hover{
+    text-decoration: underline;
+}
