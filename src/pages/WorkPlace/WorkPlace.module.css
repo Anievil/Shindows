@@ -1,0 +1,43 @@
+.workPlace{
+    background-image: url(../../images/background.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.panel{
+    width: 100vw;
+    height: 5vh;
+    background-color: #2e2e2e;
+    position: fixed;
+    bottom: 0;
+    z-index: 999999989;
+}
+
+.logo{
+    /* margin: 13px 15px 0 ; */
+    width: 20px;
+    height: 15px;
+    background-color: whitesmoke !important;
+}
+
+.logo:hover{
+    background-color: rgb(70, 70, 70) !important;
+}
+
+.logo > hr:nth-child(2){
+    height: 127%;
+    right: -2px;
+}
+
+.logoBlock{
+    width: 50px;
+    height: 40px;
+    padding: 13px 0px 0px 15px;
+    box-sizing: border-box;
+}
+
+.open, .logoBlock:hover{
+    background-color: #5e5e5e;
+    z-index: -2;
+}

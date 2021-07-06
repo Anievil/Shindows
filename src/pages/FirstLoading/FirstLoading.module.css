@@ -1,0 +1,82 @@
+.loadingCont{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    cursor: none
+}
+
+.mainText, .secondaryText, .corporationName, .poverdBy > p, .corpName{
+    color: #fff;
+    margin: 0 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none
+}
+
+.mainText{
+    font-size: 55px;
+    margin-top: -15px;
+}
+
+.loadingElem{
+    display: flex;
+    margin: 0 auto;
+    padding: 30vh;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.corpName{
+    font-size: 20px !important;
+    margin: 100px 0 0 !important;
+    padding: 0 !important;
+    height: fit-content;
+}
+
+.secondaryText, .corpName{
+    font-size: 35px;
+    font-weight: lighter;
+    padding-left: 10px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.poverdBy{
+    font-size: 18px;
+    position: fixed;
+    bottom: 5vh;
+    left: 10vw;
+    margin: auto;
+}
+
+.corporationName{
+    font-size: 18px;
+    position: fixed;
+    bottom: 5vh;
+    font-weight: bolder;
+    right: 10vw;
+    margin: 0;
+}
+
+.logoLoad{
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+}
+
+.logoBlock{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logoLoad::after {
+    transform: skewY(0deg) !important;
+}
+.logoLoad::before {
+    transform: skewY(0deg) !important;
+}

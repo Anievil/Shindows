@@ -1,0 +1,6 @@
+.workTable{
+    width: 100vw;
+    height: 95vh;
+    position: relative;
+    z-index: 2;
+}

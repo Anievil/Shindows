@@ -1,0 +1,64 @@
+.logo > hr:first-child{
+    width: auto;
+    position: absolute;
+    overflow: visible;
+    text-align: center;
+    height: 3%;
+    background-color: #000;
+    border: none; 
+    margin: auto;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: -1px;
+    z-index: 2;
+}
+
+.logo > hr:nth-child(2){
+    width: 3%;
+    position: absolute;
+    overflow: visible;
+    text-align: center;
+    height: auto;
+    background-color: #000;
+    border: none; 
+    margin: auto;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.logo{
+    background-color: lightblue;
+    position: relative;
+    z-index: 1;
+}
+
+.logo::after {
+    background-color: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-10deg);
+    transform-origin: 100%;
+    z-index: 0;
+  }
+.logo::before {
+    background-color: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    top: 0;
+    position: relative;
+    right: 0;
+    transform: skewY(10deg);
+    transform-origin: 100%;
+    z-index: 0;
+} 

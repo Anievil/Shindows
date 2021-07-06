@@ -1,0 +1,66 @@
+.loginPage{
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../../images/background.jpg);
+}
+
+.background{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.userCont{
+    position: absolute;
+    left: 0; right: 0; top: 25vh;
+    width: fit-content;
+    margin: auto;
+    
+}
+
+.userPic{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.userName, .welcomeText{
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.enterButton{
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(255,255,255,.3);
+    color: whitesmoke;
+    border: whitesmoke 3px solid;
+    font-size: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.enterButton:hover{
+    border:  3px double
+}
+
+.off{
+    position: fixed;
+    margin: auto;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.welcomeText{
+    padding-top: 40vh;
+}
