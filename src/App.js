@@ -5,6 +5,7 @@ import Login from './pages/Autorization/Autorization'
 import WorkPlace from './pages/WorkPlace/WorkPlace'
 
 function App() {
+  document.querySelector('#root').oncontextmenu = function (){return false};
   return (
     <>
       <BrowserRouter>

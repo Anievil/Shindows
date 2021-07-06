@@ -20,6 +20,7 @@
     text-align: center;
     margin: 0 auto;
     text-shadow: black 0 0 4px;
+    word-wrap: break-word;
 }
 
 .progIcon:hover{
