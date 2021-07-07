@@ -7,14 +7,17 @@ import WorkTable from '../../components/WorkPlaceComponents/WorkTable/WorkTable'
 export default function WorkPlace() {
     const [isPuskMenuOpen, setIsPuskMenuOpen] = useState(false)
 
+    const closeMenu = () => {
+        setIsPuskMenuOpen(false)
+    }
+
     const toggleMenu = () => {
-        console.log(isPuskMenuOpen)
         setIsPuskMenuOpen(!isPuskMenuOpen)
     }
 
     return (
         <div className={styles.workPlace}>
-            <WorkTable />
+            <WorkTable closeMenu={closeMenu} />
             {isPuskMenuOpen ? <PuskMenu />  : '' } 
             <div className={styles.panel}>
                 <div onClick={toggleMenu} className={styles.logoBlock + (isPuskMenuOpen ? ' ' + styles.open : '')}>

@@ -7,7 +7,7 @@
 
 .panel{
     width: 100vw;
-    height: 5vh;
+    height: 40px;
     background-color: #2e2e2e;
     position: fixed;
     bottom: 0;
@@ -26,7 +26,7 @@
 }
 
 .logo > hr:nth-child(2){
-    height: 127%;
+    height: 126%;
     right: -2px;
 }
 

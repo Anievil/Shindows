@@ -6,11 +6,25 @@ export default function TableIcon(props) {
     const [isOpenWindow, setIsOpenWindow] = useState(false)
     const [typeAndImg, setTypeAndImg] = useState(null)
 
+    const check = (position, type, offset) => {
+        if (position < offset) {
+            return 0
+        }
+        else if ((type === 'width' && position > window.innerWidth - offset - 5) || (type === 'height' && position > window.innerHeight - offset - 40)) {
+            return type === 'width' ? window.innerWidth - offset - 5 : window.innerHeight  - 130
+        }
+        else {
+            return position - offset / 2
+        }
+    }
+
     const move = (item, id, e) => {
-        item.style.left = `${e.pageX - item.offsetWidth / 2}px`
-        item.style.top = `${e.pageY - item.offsetHeight / 2}px`
-        props.elemList[id].left = `${e.pageX - item.offsetWidth / 2}px`
-        props.elemList[id].top = `${e.pageY - item.offsetHeight / 2}px`
+        const width = check(e.pageX, 'width', item.offsetWidth)
+        const height = check(e.pageY, 'height', item.offsetHeight)
+        item.style.left = `${width}px`
+        item.style.top = `${height}px`
+        props.elemList[id].left = `${width}px`
+        props.elemList[id].top = `${height}px`
         localStorage.setItem('elemList', JSON.stringify(props.elemList))
     }
 
@@ -34,7 +48,7 @@ export default function TableIcon(props) {
 
     const openWindow = (type, img) => {
         setIsOpenWindow(true)
-        setTypeAndImg({type: `${type}`, img: `${img}`})
+        setTypeAndImg({ type: `${type}`, img: `${img}` })
     }
 
     return (
@@ -43,7 +57,7 @@ export default function TableIcon(props) {
             {
                 props.elemList.map((item) => (
                     <div draggable="true" onDoubleClick={() => (openWindow(item.type, item.img))} key={item.id} onDragEnd={(e) => (dragElem(e, item.id))} style={{ left: `${item.left}`, top: `${item.top}` }} className={styles.progIcon}>
-                        <img src={item.img} alt='icon' width='30px' height='30px' />
+                        <img src={item.img} alt='icon' width='45px' height='45px' />
                         <p>{item.name} ({item.type})</p>
                     </div>))
             }

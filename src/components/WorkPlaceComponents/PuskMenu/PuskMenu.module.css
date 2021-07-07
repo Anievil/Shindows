@@ -4,6 +4,7 @@
     background-color: #444343;
     position: fixed;
     bottom: 40px;
+    z-index: 999999989;
 }
 
 .rightPanel{
