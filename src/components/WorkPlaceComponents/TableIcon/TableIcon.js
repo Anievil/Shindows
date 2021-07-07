@@ -5,6 +5,7 @@ import ProgramWindow from '../ProgramWindow/ProgramWindow'
 export default function TableIcon(props) {
     const [isOpenWindow, setIsOpenWindow] = useState(false)
     const [typeAndImg, setTypeAndImg] = useState(null)
+    const [text, setText] = useState(null)
 
     const check = (position, type, offset) => {
         if (position < offset) {
@@ -50,6 +51,17 @@ export default function TableIcon(props) {
         setIsOpenWindow(true)
         setTypeAndImg({ type: `${type}`, img: `${img}` })
     }
+    // СЛОМАНО
+    // const typeText = (e) => {
+    //     e.preventDefault()
+    //     console.log(e.target.value)
+    //     setText(e.target.value)
+    // }
+
+    // const saveName = (name, id) => {
+    //     setText(name)
+    //     props.rename(id);
+    // }
 
     return (
         <>
@@ -58,6 +70,7 @@ export default function TableIcon(props) {
                 props.elemList.map((item) => (
                     <div draggable="true" onDoubleClick={() => (openWindow(item.type, item.img))} key={item.id} onDragEnd={(e) => (dragElem(e, item.id))} style={{ left: `${item.left}`, top: `${item.top}` }} className={styles.progIcon}>
                         <img src={item.img} alt='icon' width='45px' height='45px' />
+                        {/* СЛОМАНО {props.isRename ? <form onSubmit={() => (props.rename(item.id, text))}><input onChange={typeText} type='text' value={text}></input></form> : <p onClick={() => {saveName(item.name, item.id)}}>{item.name} ({item.type})</p>} */}
                         <p>{item.name} ({item.type})</p>
                     </div>))
             }
